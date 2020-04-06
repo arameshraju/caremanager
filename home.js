@@ -1,3 +1,17 @@
-import React from 'react';
+import React,{Component} from 'react';
+import Login from './components/login'
 
-export default ({ name }) => <h1>Hello {name}!</h1>;
+class Home extends Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <React.Fragment>
+      <h1>Hospital Care Management</h1>
+      <Login/>
+      </React.Fragment>
+    );
+  }
+}
+export default Home;
