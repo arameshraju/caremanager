@@ -1,25 +1,70 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { RouteApp } from "./router";
-import Home from "./home";
+import {
+  PatientMaster,
+  DoctorMaster,
+  DaysReport,
+  DashBoard,
+  Login
+} from "./components";
 
 import "./style.css";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "Care Manager"
-    };
-  }
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-  render() {
-    return (
-      <div class="row ">
-        <Home />
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <div class="row">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/DashBoard">Home</Link>
+              </li>
+
+              <li>
+                <Link to="/Doctors">Doctors</Link>
+              </li>
+              <li>
+                <Link to="/Patients">Patients</Link>
+              </li>
+              <li>
+                <Link to="/DaysReport">Reports</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </div>
-    );
-  }
+    </Router>
+  );
+}
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
 }
 
 render(<App />, document.getElementById("root"));
