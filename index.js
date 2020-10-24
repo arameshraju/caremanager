@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import { RouteApp } from "./router";
-import { Home } from "./home";
+import Home from "./home";
 
 import "./style.css";
 
@@ -14,7 +14,11 @@ class App extends Component {
   }
 
   render() {
-    return <Home />;
+    return (
+      <div class="row ">
+        <Home />
+      </div>
+    );
   }
 }
 
