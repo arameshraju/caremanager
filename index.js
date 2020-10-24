@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Home from "./home";
+import { RouteApp } from "./router";
+import { Home } from "./home";
+
 import "./style.css";
 
 class App extends Component {
@@ -12,11 +14,7 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div class="row ">
-        <Home />
-      </div>
-    );
+    return <Home />;
   }
 }
 
