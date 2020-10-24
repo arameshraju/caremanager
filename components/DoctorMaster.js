@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class PatinetMaster extends Component {
+class DoctorMaster extends Component {
   constructor(props) {
     super(props);
   }
@@ -8,13 +8,19 @@ class PatinetMaster extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Patinet Master </h2>
+        <h2>Doctor Master </h2>
         <form>
           <table>
             <tr>
-              <td> Patinet Name</td>
+              <td> Doctor Name</td>
               <td>
                 <input type="text" name="name" />
+              </td>
+            </tr>
+            <tr>
+              <td> Qualification </td>
+              <td>
+                <input type="text" name="Qualification" />
               </td>
             </tr>
             <tr>
@@ -24,21 +30,21 @@ class PatinetMaster extends Component {
               </td>
             </tr>
             <tr>
-              <td> Village/Town </td>
+              <td> RegNo </td>
               <td>
-                <input type="text" name="Village" />
+                <input type="text" name="RegNo" />
               </td>
             </tr>
             <tr>
-              <td> Reference </td>
+              <td> email </td>
               <td>
-                <input type="text" name="Reference" />
+                <input type="text" name="email" />
               </td>
             </tr>
             <tr>
-              <td> OtherInfo </td>
+              <td> Address </td>
               <td>
-                <input type="text" name="OtherInfo" />
+                <input type="text" name="Address" />
               </td>
             </tr>
             <tr>
@@ -56,4 +62,4 @@ class PatinetMaster extends Component {
     );
   }
 }
-export default PatinetMaster;
+export default DoctorMaster;
