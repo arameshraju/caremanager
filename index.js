@@ -1,53 +1,44 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
-import {
-  PatientMaster,
-  DoctorMaster,
-  DaysReport,
-  DashBoard,
-  Login
-} from "./components";
-
+import React from "react";
+import ReactDOM from "react-dom";
 import "./style.css";
-
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Home";
 
 export default function App() {
   return (
     <Router>
       <div>
-        <div class="row">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/DashBoard">Home</Link>
-              </li>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </ul>
 
-              <li>
-                <Link to="/Doctors">Doctors</Link>
-              </li>
-              <li>
-                <Link to="/Patients">Patients</Link>
-              </li>
-              <li>
-                <Link to="/DaysReport">Reports</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <hr />
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        {/*
+          A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time
+        */}
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       </div>
@@ -56,15 +47,26 @@ export default function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
 }
-
 function About() {
-  return <h2>About</h2>;
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function Dashboard() {
+  return (
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+  );
 }
 
-render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
