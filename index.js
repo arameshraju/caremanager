@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./style.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./Home";
+import Login from "./components/Login";
 
 export default function App() {
   return (
@@ -11,13 +11,13 @@ export default function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Login</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/About">About</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/Support">Support</Link>
           </li>
         </ul>
 
@@ -32,13 +32,13 @@ export default function App() {
         */}
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Login />
           </Route>
-          <Route path="/about">
+          <Route path="/About">
             <About />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/Support">
+            <Support />
           </Route>
         </Switch>
       </div>
@@ -49,7 +49,7 @@ export default function App() {
 function Home() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>Home</h2>
     </div>
   );
 }
@@ -61,10 +61,10 @@ function About() {
   );
 }
 
-function Dashboard() {
+function Support() {
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h2>Support</h2>
     </div>
   );
 }
