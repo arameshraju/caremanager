@@ -4,6 +4,7 @@ import "./style.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
+import DashBoard from "./components/DashBoard";
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
         <ul>
           <li>
             <Link to="/">Login</Link>
+          </li>
+          <li>
+            <Link to="/DashBoard">DashBoard</Link>
           </li>
           <li>
             <Link to="/About">About</Link>
@@ -39,6 +43,9 @@ export default function App() {
           </Route>
           <Route path="/Support">
             <Support />
+          </Route>
+          <Route path="/DashBoard">
+            <DashBoard />
           </Route>
         </Switch>
       </div>
