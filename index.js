@@ -5,6 +5,12 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import DashBoard from "./components/DashBoard";
+import PatientMaster from "./components/PatientMaster ";
+import DoctorMaster from "./components/DoctorMaster ";
+import Appointment from "./components/Appointment ";
+import Prescribe from "./components/Prescribe ";
+import DaysReport from "./components/DaysReport ";
+import Despatch from "./components/Despatch ";
 
 export default function App() {
   return (
@@ -46,6 +52,24 @@ export default function App() {
           </Route>
           <Route path="/DashBoard">
             <DashBoard />
+          </Route>
+          <Route path="/PatientMaster">
+            <PatientMaster />
+          </Route>
+          <Route path="/DoctorMaster">
+            <DoctorMaster />
+          </Route>
+          <Route path="/Appointment">
+            <Appointment />
+          </Route>
+          <Route path="/Prescribe">
+            <Prescribe />
+          </Route>
+          <Route path="/Despatch">
+            <Despatch />
+          </Route>
+          <Route path="/DaysReport">
+            <DaysReport />
           </Route>
         </Switch>
       </div>
