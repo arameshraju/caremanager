@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+
 import UserSvc from "./../service/UserSvc";
+
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = { user: "demo.", password: "demo" };
+    this.state = { user: "demo.", password: "demo", redirect: false };
     this.userSvc = new UserSvc();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,16 +27,22 @@ class Login extends Component {
       user: this.state.user,
       password: this.state.password
     });
-    console.log(this.userSvc.getName());
 
+    console.log(this.userSvc.getName());
+    this.setState({
+      redirect: true
+    });
     event.preventDefault();
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/DashBoard" />;
+    }
     return (
       <React.Fragment>
         <h2>Login</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <table>
             <tbody>
               <tr>
@@ -64,7 +73,11 @@ class Login extends Component {
                   <input type="Reset" value="Clear" />{" "}
                 </td>
                 <td>
-                  <input type="submit" value="login" />
+                  <input
+                    type="submit"
+                    value="login"
+                    onClick={this.handleSubmit}
+                  />
                 </td>
               </tr>
             </tbody>
