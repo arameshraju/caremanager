@@ -24,26 +24,6 @@ function DashBoard() {
           <Link to="/DaysReport">Reports</Link>
         </div>
       </div>
-      <ul>
-        <li>
-          <Link to="/PatientMaster">PatientMaster</Link>
-        </li>
-        <li>
-          <Link to="/DoctorMaster">DoctorMaster</Link>
-        </li>
-        <li>
-          <Link to="/Appointment">Appointment</Link>
-        </li>
-        <li>
-          <Link to="/Prescribe">Prescribe</Link>
-        </li>
-        <li>
-          <Link to="/Prescribe">Prescribe</Link>
-        </li>
-        <li>
-          <Link to="/Despatch">Despatch</Link>
-        </li>
-      </ul>
     </React.Fragment>
   );
 }
