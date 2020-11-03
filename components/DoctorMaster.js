@@ -120,7 +120,11 @@ class DoctorMaster extends Component {
                   <input type="Reset" value="Clear" />{" "}
                 </td>
                 <td>
-                  <input type="submit" value="Save" />
+                  <input
+                    type="submit"
+                    value="Save"
+                    onClick={this.handleSubmit}
+                  />
                 </td>
               </tr>
             </tbody>

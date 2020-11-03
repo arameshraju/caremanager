@@ -18,6 +18,7 @@ class Doctor {
     } else {
       this.doctortData = eval(localStorage.getItem("doctortData"));
     }
+    console.log(JSON.stringify(this.doctortData));
   }
   SearchData = function(data) {
     return this.doctortData;
