@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import Doctor from "./../service/Doctor";
 
 class DoctorMaster extends Component {
   constructor(props) {
     super(props);
+    this.doctor = new Doctor();
   }
 
   render() {

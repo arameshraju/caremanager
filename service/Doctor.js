@@ -2,10 +2,13 @@ import React from "react";
 class Doctor {
   doctortData = [
     {
-      pid: 1,
-      name: "Ramesh",
-      mobile: "989898989898",
-      village: "Hyderabad"
+      did: 1,
+      name: "Demo",
+      qualification: "Demo",
+      mobile: "108",
+      reg: "108-911",
+      email: "demo@doc.com",
+      address: "108,india"
     }
   ];
   constructor() {
