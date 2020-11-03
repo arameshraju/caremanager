@@ -28,9 +28,9 @@ class Login extends Component {
       password: this.state.password
     });
 
-    console.log(this.userSvc.getName());
+    console.log(this.userSvc.getAuth());
     this.setState({
-      redirect: true
+      redirect: this.userSvc.getAuth()
     });
     event.preventDefault();
   }
