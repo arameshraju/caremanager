@@ -3,16 +3,23 @@ class TransData {
   tranData = [
     {
       transId: 1,
+      transDate: "2020-11-4",
+      pid: "1",
       name: "Demo",
-      qualification: "Demo",
-      mobile: "108",
-      reg: "108-911",
-      email: "demo@doc.com",
-      address: "108,india"
+      did: "1",
+      docname: "Demo",
+      symptom: "Fever",
+      diagnos: "good",
+      prescription: "dosage",
+      fee: 0,
+      medicine: 0,
+      total: 0,
+      despatch: "N",
+      paid: "N"
     }
   ];
   constructor() {
-    console.log("doctort cons");
+    console.log("TransData cons");
     if (localStorage.getItem("tranData") == null) {
       localStorage.setItem("tranData", JSON.stringify(this.tranData));
     } else {
