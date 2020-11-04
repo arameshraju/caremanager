@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 import Login from "./components/Login";
 import DashBoard from "./components/DashBoard";
 import PatientMaster from "./components/PatientMaster ";
 import DoctorMaster from "./components/DoctorMaster ";
-import Appointment from "./components/Appointment ";
+// import Appointment from "./components/Appointment ";
 import Prescribe from "./components/Prescribe ";
 import DaysReport from "./components/DaysReport ";
 import Despatch from "./components/Despatch ";
@@ -78,9 +84,7 @@ export default function App() {
           <Route path="/DoctorMaster">
             <DoctorMaster />
           </Route>
-          <Route path="/Appointment">
-            <Appointment />
-          </Route>
+          <Route path="/Appointment/:id" children={<Appointment />} />
           <Route path="/Prescribe">
             <Prescribe />
           </Route>
@@ -95,7 +99,10 @@ export default function App() {
     </Router>
   );
 }
-
+function Appointment() {
+  // let { id } = useParams();
+  return <h2>Appointment-for Test</h2>;
+}
 function Home() {
   return (
     <div>
