@@ -16,12 +16,12 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-          <a class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a className="navbar-brand" href="#">
             DoCare
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -32,18 +32,18 @@ export default function App() {
             <span class="navbar-toggler-icon" />
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto ">
-              <li class="nav-item active  ">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto ">
+              <li className="nav-item active  ">
                 <Link to="/">Login</Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link to="/DashBoard">DashBoard</Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link to="/About">About</Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link to="/Support">Support</Link>
               </li>
             </ul>
