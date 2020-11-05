@@ -1,6 +1,7 @@
 import React from "react";
 import Patient from "./../service/Patient";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Appointment from "./Appointment ";
 class DashBoard extends React.Component {
   constructor(props) {
     super(props);
@@ -42,6 +43,9 @@ class DashBoard extends React.Component {
           <div className="col-sm-2">
             <Link to="/DaysReport">Reports</Link>
           </div>
+        </div>
+        <div className="row">
+          <Appointment brand="ramesh" />
         </div>
         <div className="row">
           <div className="col-3">

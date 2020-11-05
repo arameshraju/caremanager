@@ -13,7 +13,7 @@ import Login from "./components/Login";
 import DashBoard from "./components/DashBoard";
 import PatientMaster from "./components/PatientMaster ";
 import DoctorMaster from "./components/DoctorMaster ";
-// import Appointment from "./components/Appointment ";
+import Appointment from "./components/Appointment ";
 import Prescribe from "./components/Prescribe ";
 import DaysReport from "./components/DaysReport ";
 import Despatch from "./components/Despatch ";
@@ -84,7 +84,7 @@ export default function App() {
           <Route path="/DoctorMaster">
             <DoctorMaster />
           </Route>
-          <Route path="/Appointment/:id" children={<Appointment />} />
+          <Route path="/Appointment/:brand" children={<Appointment  />} />
           <Route path="/Prescribe">
             <Prescribe />
           </Route>
@@ -99,17 +99,17 @@ export default function App() {
     </Router>
   );
 }
-function Appointment() {
-  // let { id } = useParams();
-  return <h2>Appointment-for Test</h2>;
-}
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
+// function Appointment() {
+//   // let { id } = useParams();
+//   return <h2>Appointment-for Test</h2>;
+// }
+// function Home() {
+//   return (
+//     <div>
+//       <h2>Home</h2>
+//     </div>
+//   );
+// }
 function About() {
   return (
     <div>
