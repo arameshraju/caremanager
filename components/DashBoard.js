@@ -5,11 +5,18 @@ import Appointment from "./Appointment ";
 class DashBoard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "any", pData: [] };
+    this.state = { value: "any", pData: [], appData: {} };
     this.patient = new Patient();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.openAppointment = this.openAppointment.bind(this);
   }
+
+  openAppointment = data => {
+    console.log("Appointment " + data.name);
+    this.setState({ appData: data });
+  };
+
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
@@ -31,9 +38,6 @@ class DashBoard extends React.Component {
           <div className="col-2">
             <Link to="/DoctorMaster">Doctor</Link>
           </div>
-          <div className="col-3">
-            <Link to="/Appointment">Appointment</Link>
-          </div>
           <div className="col-2">
             <Link to="/Prescribe">Prescribe</Link>
           </div>
@@ -45,7 +49,7 @@ class DashBoard extends React.Component {
           </div>
         </div>
         <div className="row">
-          <Appointment brand="ramesh" />
+          <Appointment appData={this.state.appData} />
         </div>
         <div className="row">
           <div className="col-3">
@@ -77,7 +81,9 @@ class DashBoard extends React.Component {
                   <td>{item.mobile}</td>
                   <td>{item.village}</td>
                   <td>
-                    <Link to="/Appointment/{item.village">Appointment</Link>
+                    <button onClick={() => this.openAppointment(item)}>
+                      Appointment
+                    </button>
                   </td>
                 </tr>
               ))}

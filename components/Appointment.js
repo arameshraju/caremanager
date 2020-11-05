@@ -10,7 +10,10 @@ class Appointment extends Component {
     return (
       <React.Fragment>
         <div className="row">
-          <div className="col-2 offset-2">appointment</div>
+          <div className="col-2 offset-2">
+            appointment {this.props.appData.name}
+          
+          </div>
         </div>
       </React.Fragment>
     );
