@@ -12,7 +12,6 @@ class Appointment extends Component {
         <div className="row">
           <div className="col-2 offset-2">
             appointment {this.props.appData.name}
-          
           </div>
         </div>
       </React.Fragment>
