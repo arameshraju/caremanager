@@ -20,7 +20,7 @@ class Appointment extends Component {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
-
+    console.log(value + ":" + name);
     this.setState({
       [name]: value
     });
@@ -46,6 +46,7 @@ class Appointment extends Component {
                   <td> {this.props.appData.name} </td>{" "}
                   <td>
                     <select
+                    name="doctor"
                       value={this.state.doctor}
                       onChange={this.handleChange}
                     >
