@@ -35,8 +35,9 @@ class TransData {
     return this.tranData;
   };
   addTrans(data) {
+    console.log(JSON.stringify(data));
     this.tranData = [...this.tranData, data];
-    localStorage.setItem("tranData", JSON.stringify(this.data));
+    localStorage.setItem("tranData", JSON.stringify(this.tranData));
   }
 }
 

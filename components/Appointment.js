@@ -22,7 +22,6 @@ class Appointment extends Component {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
-    console.log(value + ":" + name);
     this.setState({
       [name]: value
     });
@@ -31,8 +30,8 @@ class Appointment extends Component {
     this.tdata = {
       transId: Date.now(),
       transDate: Date.UTC(),
-      pid: this.props.pid,
-      name: this.props.pid,
+      pid: this.props.appData.pid,
+      name: this.props.appData.name,
       did: "",
       docname: this.state.doctor,
       symptom: this.state.Symptoms,
@@ -46,7 +45,7 @@ class Appointment extends Component {
       status: "A"
     };
     this.transData.addTrans(this.tdata);
-    console.log("Submit" + JSON.stringify(this.state));
+    // console.log("Submit" + JSON.stringify(this.state));
     this.tdata = {};
 
     event.preventDefault();
