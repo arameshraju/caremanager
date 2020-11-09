@@ -15,20 +15,24 @@ class TransData {
       medicine: 0,
       total: 0,
       despatch: "N",
-      paid: "N"
+      paid: "N",
+      status: "A"
     }
   ];
   constructor() {
-    console.log("TransData cons");
+    console.log("TransData cons : ");
+
     if (localStorage.getItem("tranData") == null) {
+      console.log("first data");
       localStorage.setItem("tranData", JSON.stringify(this.tranData));
     } else {
-      this.doctortData = eval(localStorage.getItem("tranData"));
+      console.log("reload data");
+      this.tranData = eval(localStorage.getItem("tranData"));
     }
     console.log(JSON.stringify(this.tranData));
   }
-  SearchData = function(data) {
-    return this.data;
+  SearchData = function() {
+    return this.tranData;
   };
   addTrans(data) {
     this.tranData = [...this.tranData, data];

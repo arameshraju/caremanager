@@ -84,7 +84,7 @@ export default function App() {
           <Route path="/DoctorMaster">
             <DoctorMaster />
           </Route>
-          <Route path="/Appointment/:brand" children={<Appointment  />} />
+          <Route path="/Appointment/:brand" children={<Appointment />} />
           <Route path="/Prescribe">
             <Prescribe />
           </Route>
@@ -117,11 +117,16 @@ function About() {
     </div>
   );
 }
-
+function AllData() {
+  localStorage.clear();
+}
 function Support() {
   return (
     <div>
       <h2>Support</h2>
+      <button className="btn btn-danger" onClick={AllData}>
+        Format Data{" "}
+      </button>
     </div>
   );
 }

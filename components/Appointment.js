@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import Doctor from "./../service/Doctor";
+import TransData from "./../service/TransData";
 
 class Appointment extends Component {
   constructor(props) {
     super(props);
     this.doctor = new Doctor();
+    this.transData = new TransData();
 
     this.state = {
       doctor: "",
@@ -26,7 +28,27 @@ class Appointment extends Component {
     });
   }
   handleSubmit(event) {
+    this.tdata = {
+      transId: Date.now(),
+      transDate: Date.UTC(),
+      pid: this.props.pid,
+      name: this.props.pid,
+      did: "",
+      docname: this.state.doctor,
+      symptom: this.state.Symptoms,
+      diagnos: "",
+      prescription: "",
+      fee: 0,
+      medicine: 0,
+      total: 0,
+      despatch: "N",
+      paid: "N",
+      status: "A"
+    };
+    this.transData.addTrans(this.tdata);
     console.log("Submit" + JSON.stringify(this.state));
+    this.tdata = {};
+
     event.preventDefault();
   }
   render() {
@@ -46,7 +68,7 @@ class Appointment extends Component {
                   <td> {this.props.appData.name} </td>{" "}
                   <td>
                     <select
-                    name="doctor"
+                      name="doctor"
                       value={this.state.doctor}
                       onChange={this.handleChange}
                     >
