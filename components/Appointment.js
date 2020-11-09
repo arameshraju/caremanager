@@ -7,9 +7,28 @@ class Appointment extends Component {
     super(props);
     this.doctor = new Doctor();
 
+    this.state = {
+      doctor: "",
+      Symptoms: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
     console.log(this.props);
   }
+  handleChange(event) {
+    const target = event.target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+    const name = target.name;
 
+    this.setState({
+      [name]: value
+    });
+  }
+  handleSubmit(event) {
+    console.log("Submit" + this.state);
+    event.preventDefault();
+  }
   render() {
     return (
       <React.Fragment>
@@ -26,18 +45,29 @@ class Appointment extends Component {
                 <tr>
                   <td> {this.props.appData.name} </td>{" "}
                   <td>
-                    <select>
-                      <option value="grapefruit">Grapefruit</option>
-                      <option value="lime">Lime</option>
-                      <option selected value="coconut">
-                        Coconut
-                      </option>
-                      <option value="mango">Mango</option>
-                    </select>{" "}
-                  </td>{" "}
+                    <select
+                      value={this.state.doctor}
+                      onChange={this.handleChange}
+                    >
+                      {this.doctor.SearchData().map(item => (
+                        <option value={item.name}>{item.name}</option>
+                      ))}
+                    </select>
+                  </td>
                   <td>
-                    {" "}
-                    <input type="text" name="symptom" />{" "}
+                    <input
+                      type="text"
+                      name="Symptoms"
+                      value={this.state.Symptoms}
+                      onChange={this.handleChange}
+                    />{" "}
+                  </td>
+                  <td>
+                    <input
+                      type="submit"
+                      value="Fix"
+                      onClick={this.handleSubmit}
+                    />
                   </td>
                 </tr>
               </tbody>
