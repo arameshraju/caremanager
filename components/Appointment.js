@@ -26,7 +26,7 @@ class Appointment extends Component {
     });
   }
   handleSubmit(event) {
-    console.log("Submit" + this.state);
+    console.log("Submit" + JSON.stringify(this.state));
     event.preventDefault();
   }
   render() {
