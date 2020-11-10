@@ -39,7 +39,7 @@ class DashBoard extends React.Component {
             <Link to="/DoctorMaster">Doctor</Link>
           </div>
           <div className="col-2">
-            <Link to="/Prescribe">Prescribe</Link>
+            <Link to="/Consultation">Consultation</Link>
           </div>
           <div className="col-2">
             <Link to="/Despatch">Despatch</Link>

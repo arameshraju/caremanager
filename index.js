@@ -17,6 +17,7 @@ import Appointment from "./components/Appointment ";
 import Prescribe from "./components/Prescribe ";
 import DaysReport from "./components/DaysReport ";
 import Despatch from "./components/Despatch ";
+import Consultation from "./components/Consultation ";
 
 export default function App() {
   return (
@@ -91,8 +92,11 @@ export default function App() {
           <Route path="/Despatch">
             <Despatch />
           </Route>
-          <Route path="/DaysReport">
-            <DaysReport />
+          <Route path="/Despatch">
+            <Despatch />
+          </Route>
+          <Route path="/Consultation">
+            <Consultation />
           </Route>
         </Switch>
       </div>
