@@ -46,7 +46,7 @@ class Presribe extends Component {
       paid: "N",
       status: "P"
     };
-    console.log(this.tdata);
+    // console.log(this.tdata);
     this.transData.updateTrans(this.tdata);
     // console.log("Submit" + JSON.stringify(this.state));
     this.tdata = {};
