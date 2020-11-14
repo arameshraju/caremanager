@@ -56,6 +56,18 @@ class Presribe extends Component {
         <div className="row">
           <div className="col-2 offset-2">
             <table className="table">
+              <tbody>
+                <tr>
+                  <td> Patient</td>
+                  <td> {this.props.appData.name} </td>
+                </tr>
+                <tr>
+                  <td> Doctor</td>
+                  <td> {this.props.appData.docname} </td>
+                </tr>
+              </tbody>
+            </table>
+            <table className="table">
               <thead>
                 <tr>
                   <td> Patient Name </td> <td> Doctor </td> <td>Symptoms</td>
