@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Prescribe from "./Prescribe ";
+import Bill from "./Bill ";
 import TransData from "./../service/TransData";
+
 class Despatch extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ class Despatch extends Component {
       <React.Fragment>
         <div className="row">
           <h2>Consultation Details</h2>
-          <Prescribe appData={this.state.appData} />
+          <Bill appData={this.state.appData} />
         </div>
         <h2>Consultation Wait list</h2>
         <div className="row">
