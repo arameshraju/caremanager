@@ -88,15 +88,6 @@ class Bill extends Component {
                   <td> Treatment</td>
                   <td>{this.props.appData.medicine}</td>
                 </tr>
-                <tr>
-                  <td>
-                    <input
-                      type="submit"
-                      value="Print"
-                      onClick={this.handleSubmit}
-                    />
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>

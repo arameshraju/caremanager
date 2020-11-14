@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Bill from "./Bill ";
 import TransData from "./../service/TransData";
-
+import ReactToPrint, { PrintContextConsumer } from "react-to-print";
 class Despatch extends Component {
   constructor(props) {
     super(props);
@@ -41,9 +41,19 @@ class Despatch extends Component {
                     <td>{item.docname}</td>
                     <td>{item.symptom}</td>
                     <td>
-                      <button onClick={() => this.openAppointment(item)}>
-                        Paid
-                      </button>
+                      <ReactToPrint content={() => this.componentRef}>
+                        <PrintContextConsumer>
+                          {({ handlePrint }) => (
+                            <button onClick={handlePrint}>
+                              Print this out!
+                            </button>
+                          )}
+                        </PrintContextConsumer>
+                      </ReactToPrint>
+                      <Bill
+                        appData={item}
+                        ref={el => (this.componentRef = el)}
+                      />
                     </td>
                   </tr>
                 ))}
