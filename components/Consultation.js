@@ -31,18 +31,21 @@ class Consultation extends Component {
               <td>Action</td>
             </thead>
             <tbody>
-              {this.transData.SearchData().map(item => (
-                <tr>
-                  <td>{item.name}</td>
-                  <td>{item.docname}</td>
-                  <td>{item.symptom}</td>
-                  <td>
-                    <button onClick={() => this.openAppointment(item)}>
-                      Consult
-                    </button>
-                  </td>
-                </tr>
-              ))}
+              {this.transData
+                .SearchData()
+                .filter(tdata => tdata.status == "A")
+                .map(item => (
+                  <tr>
+                    <td>{item.name}</td>
+                    <td>{item.docname}</td>
+                    <td>{item.symptom}</td>
+                    <td>
+                      <button onClick={() => this.openAppointment(item)}>
+                        Consult
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
