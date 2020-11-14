@@ -30,23 +30,24 @@ class Presribe extends Component {
   }
   handleSubmit(event) {
     this.tdata = {
-      transId: Date.now(),
-      transDate: Date.UTC(),
+      transId: this.props.appData.transId,
+      transDate: this.props.appData.transDate,
       pid: this.props.appData.pid,
       name: this.props.appData.name,
       did: "",
-      docname: this.state.doctor,
-      symptom: this.state.Symptoms,
-      diagnos: "",
-      prescription: "",
-      fee: 0,
-      medicine: 0,
+      docname: this.props.appData.docname,
+      symptom: this.props.appData.symptom,
+      diagnos: this.state.diagnos,
+      prescription: this.state.prescription,
+      fee: this.state.Symptoms,
+      medicine: this.state.treatment,
       total: 0,
       despatch: "N",
       paid: "N",
-      status: "A"
+      status: "P"
     };
-    this.transData.addTrans(this.tdata);
+    console.log(this.tdata);
+    this.transData.updateTrans(this.tdata);
     // console.log("Submit" + JSON.stringify(this.state));
     this.tdata = {};
 

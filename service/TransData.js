@@ -39,6 +39,17 @@ class TransData {
     this.tranData = [...this.tranData, data];
     localStorage.setItem("tranData", JSON.stringify(this.tranData));
   }
+  updateTrans(data) {
+    for (var i in this.tranData) {
+      if (this.tranData[i].transId == data.transId) {
+        this.tranData[i] = data;
+      }
+    }
+    //console.log(JSON.stringify(data));
+    //this.tranData = [...this.tranData, data];
+    localStorage.setItem("tranData", JSON.stringify(this.tranData));
+    console.log(JSON.stringify(this.tranData));
+  }
 }
 
 export default TransData;
