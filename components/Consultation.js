@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Prescribe from "./Prescribe ";
 import TransData from "./../service/TransData";
 class Consultation extends Component {
   constructor(props) {
@@ -16,7 +17,11 @@ class Consultation extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Consultation</h2>
+        <div className="row">
+          <h2>Consultation Details</h2>
+          <Prescribe appData={this.state.appData} />
+        </div>
+        <h2>Consultation Wait list</h2>
         <div className="row">
           <table className="table">
             <thead>
