@@ -94,7 +94,18 @@ class Presribe extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td> Prescription</td>
+                  <td> Fee</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="fee"
+                      value={this.state.fee}
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td> Treatment</td>
                   <td>
                     <input
                       type="text"
@@ -104,48 +115,18 @@ class Presribe extends Component {
                     />
                   </td>
                 </tr>
-              </tbody>
-            </table>
-            <table className="table">
-              <thead>
                 <tr>
-                  <td> Patient Name </td> <td> Doctor </td> <td>Symptoms</td>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td> {this.props.appData.name} </td>{" "}
-                  <td>
-                    <select
-                      name="doctor"
-                      value={this.state.doctor}
-                      onChange={this.handleChange}
-                    >
-                      {this.doctor.SearchData().map(item => (
-                        <option value={item.name}>{item.name}</option>
-                      ))}
-                    </select>
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      name="Symptoms"
-                      value={this.state.Symptoms}
-                      onChange={this.handleChange}
-                    />{" "}
-                  </td>
+                  <td> Treatment</td>
                   <td>
                     <input
                       type="submit"
-                      value="Fix"
+                      value="Save"
                       onClick={this.handleSubmit}
                     />
                   </td>
                 </tr>
               </tbody>
             </table>
-            appointment {this.props.appData.name}
           </div>
         </div>
       </React.Fragment>
