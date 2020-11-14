@@ -10,8 +10,10 @@ class Presribe extends Component {
     this.transData = new TransData();
 
     this.state = {
-      doctor: "",
-      Symptoms: ""
+      diagnos: "",
+      prescription: "",
+      fee: "",
+      treatment: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -64,6 +66,43 @@ class Presribe extends Component {
                 <tr>
                   <td> Doctor</td>
                   <td> {this.props.appData.docname} </td>
+                </tr>
+                <tr>
+                  <td> Symptoms</td>
+                  <td> {this.props.appData.symptom} </td>
+                </tr>
+                <tr>
+                  <td> Diagnos</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="diagnos"
+                      value={this.state.diagnos}
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td> Prescription</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="prescription"
+                      value={this.state.prescription}
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td> Prescription</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="treatment"
+                      value={this.state.treatment}
+                      onChange={this.handleChange}
+                    />
+                  </td>
                 </tr>
               </tbody>
             </table>
