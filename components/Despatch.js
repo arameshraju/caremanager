@@ -18,10 +18,6 @@ class Despatch extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <h2>Consultation Details</h2>
-          <Bill appData={this.state.appData} />
-        </div>
         <h2>Consultation Wait list</h2>
         <div className="row">
           <table className="table">
