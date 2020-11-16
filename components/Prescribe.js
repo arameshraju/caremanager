@@ -39,7 +39,7 @@ class Presribe extends Component {
       symptom: this.props.appData.symptom,
       diagnos: this.state.diagnos,
       prescription: this.state.prescription,
-      fee: this.state.Symptoms,
+      fee: this.state.fee,
       medicine: this.state.treatment,
       total: 0,
       despatch: "N",
