@@ -6,6 +6,7 @@ class PatinetMaster extends Component {
     super(props);
     this.state = {
       pid: Date.now(),
+      age: 0,
       name: "",
       mobile: "",
       village: ""
@@ -29,6 +30,7 @@ class PatinetMaster extends Component {
     this.patient.addPatient({
       pid: Date.now(),
       name: this.state.name,
+      age: this.state.age,
       mobile: this.state.mobile,
       village: this.state.village
     });
@@ -53,6 +55,18 @@ class PatinetMaster extends Component {
                     />
                   </td>
                 </tr>
+                <tr>
+                  <td> Patinet Age</td>
+                  <td>
+                    <input
+                      type="number"
+                      name="age"
+                      value={this.state.age}
+                      onChange={this.handleChange}
+                    />
+                  </td>
+                </tr>
+
                 <tr>
                   <td> MobileNo </td>
                   <td>
