@@ -56,14 +56,16 @@ class Bill extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="row">
-          <h1 align="center">IDEAL HEMEO CLINIC</h1>
-          <br />
+        <div>
+          <div className="row">
+            <h1 align="center">IDEAL HEMEO CLINIC</h1>
+            <br />
 
-          <h2 align="center">Receipt</h2>
-          <br />
-          <div className="col-12">
-            <table className="table">
+            <h2 align="center">Receipt</h2>
+            <br />
+          </div>
+          <div className="row">
+            <table className="table" width="100%">
               <tbody>
                 <tr>
                   <td> </td>
