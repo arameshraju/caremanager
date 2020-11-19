@@ -57,36 +57,41 @@ class Bill extends Component {
     return (
       <React.Fragment>
         <div className="row">
+          <h1 align="center">IDEAL HEMEO CLINIC</h1>
+          <h2 align="center">Receipt</h2>
+        </div>
+        <div className="row">
           <div className="col-2 offset-2">
             <table className="table">
               <tbody>
                 <tr>
-                  <td> Patient</td>
+                  <td> </td>
+                  <td> Date: {this.props.appData.transDate}</td>
+                </tr>
+
+                <tr>
+                  <td> Patient Name</td>
                   <td> {this.props.appData.name} </td>
                 </tr>
                 <tr>
-                  <td> Doctor</td>
-                  <td> {this.props.appData.docname} </td>
+                  <td> Patient Age</td>
+                  <td> {this.props.appData.age} </td>
                 </tr>
                 <tr>
-                  <td> Symptoms</td>
-                  <td> {this.props.appData.symptom} </td>
-                </tr>
-                <tr>
-                  <td> Diagnos</td>
-                  <td>{this.props.appData.diagnos}</td>
-                </tr>
-                <tr>
-                  <td> Prescription</td>
-                  <td>{this.props.appData.prescription}</td>
+                  <td> Patient Address</td>
+                  <td> {this.props.appData.address} </td>
                 </tr>
                 <tr>
                   <td> Fee</td>
                   <td>{this.props.appData.fee}</td>
                 </tr>
                 <tr>
-                  <td> Treatment</td>
+                  <td> Treatment Charges</td>
                   <td>{this.props.appData.medicine}</td>
+                </tr>
+                <tr>
+                  <td> Total Fee</td>
+                  <td>{this.props.appData.total}</td>
                 </tr>
               </tbody>
             </table>
