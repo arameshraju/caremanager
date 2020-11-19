@@ -70,6 +70,8 @@ class DashBoard extends React.Component {
           <table className="table">
             <thead>
               <td>Name</td>
+              <td>Age</td>
+
               <td>Phone</td>
               <td>Village</td>
               <td>Action</td>
@@ -78,6 +80,8 @@ class DashBoard extends React.Component {
               {this.state.pData.map(item => (
                 <tr>
                   <td>{item.name}</td>
+                  <td>{item.age}</td>
+
                   <td>{item.mobile}</td>
                   <td>{item.village}</td>
                   <td>
