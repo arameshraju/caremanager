@@ -43,7 +43,7 @@ class Presribe extends Component {
       prescription: this.state.prescription,
       fee: this.state.fee,
       medicine: this.state.treatment,
-      total: this.state.fee + this.state.treatment,
+      total: Number(this.state.fee) + Number(this.state.treatment),
       despatch: "N",
       paid: "N",
       status: "P"
@@ -120,7 +120,7 @@ class Presribe extends Component {
                 </tr>
                 <tr>
                   <td> Total </td>
-                  <td>{this.state.fee + this.state.treatment} </td>
+                  <td>{ Number(this.state.fee) + Number(this.state.treatment) } </td>
                 </tr>
 
                 <tr>
