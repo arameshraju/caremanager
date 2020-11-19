@@ -58,10 +58,11 @@ class Bill extends Component {
       <React.Fragment>
         <div className="row">
           <h1 align="center">IDEAL HEMEO CLINIC</h1>
+          <br />
+
           <h2 align="center">Receipt</h2>
-        </div>
-        <div className="row">
-          <div className="col-2 offset-2">
+          <br />
+          <div className="col-12">
             <table className="table">
               <tbody>
                 <tr>

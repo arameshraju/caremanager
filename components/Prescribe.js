@@ -120,7 +120,9 @@ class Presribe extends Component {
                 </tr>
                 <tr>
                   <td> Total </td>
-                  <td>{ Number(this.state.fee) + Number(this.state.treatment) } </td>
+                  <td>
+                    {Number(this.state.fee) + Number(this.state.treatment)}{" "}
+                  </td>
                 </tr>
 
                 <tr>
