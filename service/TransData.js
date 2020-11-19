@@ -6,6 +6,8 @@ class TransData {
       transDate: "2020-11-4",
       pid: "1",
       name: "Demo",
+      age: 0,
+      village: "",
       did: "1",
       docname: "Demo",
       symptom: "Fever",

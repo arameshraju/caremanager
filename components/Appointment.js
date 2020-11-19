@@ -32,6 +32,8 @@ class Appointment extends Component {
       transDate: Date.UTC(),
       pid: this.props.appData.pid,
       name: this.props.appData.name,
+      age: this.props.appData.age,
+      village: this.props.appData.village,
       did: "",
       docname: this.state.doctor,
       symptom: this.state.Symptoms,
@@ -94,7 +96,6 @@ class Appointment extends Component {
                 </tr>
               </tbody>
             </table>
-            appointment {this.props.appData.name}
           </div>
         </div>
       </React.Fragment>

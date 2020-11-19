@@ -34,6 +34,8 @@ class Presribe extends Component {
       transDate: this.props.appData.transDate,
       pid: this.props.appData.pid,
       name: this.props.appData.name,
+      age: this.props.appData.age,
+      village: this.props.appData.village,
       did: "",
       docname: this.props.appData.docname,
       symptom: this.props.appData.symptom,
@@ -41,7 +43,7 @@ class Presribe extends Component {
       prescription: this.state.prescription,
       fee: this.state.fee,
       medicine: this.state.treatment,
-      total: 0,
+      total: this.state.fee + this.state.treatment,
       despatch: "N",
       paid: "N",
       status: "P"
@@ -98,7 +100,7 @@ class Presribe extends Component {
                   <td> Fee</td>
                   <td>
                     <input
-                      type="text"
+                      type="number"
                       name="fee"
                       value={this.state.fee}
                       onChange={this.handleChange}
@@ -109,13 +111,18 @@ class Presribe extends Component {
                   <td> Treatment</td>
                   <td>
                     <input
-                      type="text"
+                      type="number"
                       name="treatment"
                       value={this.state.treatment}
                       onChange={this.handleChange}
                     />
                   </td>
                 </tr>
+                <tr>
+                  <td> Total </td>
+                  <td>{this.state.fee + this.state.treatment} </td>
+                </tr>
+
                 <tr>
                   <td> Treatment</td>
                   <td>
